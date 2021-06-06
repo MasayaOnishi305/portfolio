@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+.slick-prev {
+    left: 20px;
+}
+
+.slick-next {
+    right: 40px;
+}
+
+.slick-prev, .slick-next {
+    z-index: 100;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #333333;
+    font-size: 40px;
+}
+
+.slider {
+    width: 50%;
+    margin: auto;
+}
+
+.slick-slide {
+    opacity: 1;
+}
+
+.remodal-is-initialized {
+    float: none;
+    height: auto;
+    opacity: 1;
+} 
+
+.remodal-cancel {
+    background: #C19078;
+}
+
+@media screen and (max-width: 770px) {
+    .slick-next {
+        right: 20px;
+    }
+    .slick-prev:before, .slick-next:before {
+        font-size: 3vw!important;
+    }
+    .remodal{
+        padding: 5vw;
+    }
+}

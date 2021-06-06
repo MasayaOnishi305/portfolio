@@ -1,0 +1,623 @@
+/*―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
+――
+0.全体に適用するCSS
+
+1.header
+
+2.main
+
+3.footer
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+
+/*―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
+――
+  0.全体に適用するCSS
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+@font-face {
+  font-family: 'my-font';
+  src: url(../font/FlopDesignFONT.otf) format('otf');
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: #333333;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+li {
+  list-style: none;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+img {
+  display: block;
+}
+
+html {
+  font-family: 'my-font',sans-serif;
+  background-color: #FAF7EF;
+  scroll-behavior: smooth;
+}
+
+:focus {
+  outline: none;
+}
+
+/*――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
+――
+  1.header
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+
+.header-top {
+  position: relative;
+  background-image: url(../img/top-img.jpg);
+  background-size: cover;
+  height: 680px;
+  text-align: center;
+}
+
+.header-title {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 70px;
+}
+
+@media screen and (max-width: 1400px) {
+  .header-top {
+    height: 40vw;
+  }
+  .header-title {
+    font-size: 5.5vw;
+  }
+}
+
+/* header-navi
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+
+.header-navi ul {
+  display: flex;
+  justify-content: center;
+}
+
+.header-navi-item {
+  font-size: 20px;
+  padding: 0px 20px;
+  margin: 50px 0px;
+  -webkit-transform: skewX(150deg);
+  -moz-transform: skewX(150deg);
+  transform: skewX(150deg);
+  border-right: 1px solid #707070;
+}
+
+.header-navi-item a {
+  display: block;
+  transform: skewX(-150deg);
+  padding: 0 10px;
+}
+
+.header-navi-item:last-child {
+  border-right: none;
+}
+
+/*――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
+――
+  2.main
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+
+main {
+  padding: 0px 180px;
+}
+
+@media screen and (min-width: 1400px) {
+  main {
+    width: 1300px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  main {
+    padding: 0px 40px !important;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  main {
+    padding: 0px 20px;
+  }
+}
+
+/* section共通
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+
+.section {
+  text-align: center;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  margin-top: -100px;
+  padding-top: 100px;
+}
+
+.section-title {
+  font-size: 30px;
+  padding-bottom: 60px;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 770px) {
+  .section-title {
+    font-size: 4vw !important;
+    padding-bottom: 60px !important;
+  }
+}
+
+/* self-introduction
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+
+.self-introduction-area {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.self-introduction-leftarea {
+  width: 20%;
+}
+
+.my-icon {
+  width: 80%;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+}
+
+.sns-icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sns {
+  position: relative;
+  z-index: 100;
+}
+
+.git-hub {
+  margin-left: 30px;
+}
+
+.sns-icon-hover {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  visibility: hidden;
+}
+
+.self-introduction-rightarea {
+  width: 80%;
+  padding-left: 100px;
+}
+
+.self-introduction-rightarea p {
+  font-size: 12px;
+  line-height: 50px;
+  border-bottom: 1px solid #707070;
+}
+
+@media screen and (max-width: 1040px) {
+  .self-introduction-area {
+    display: block;
+  }
+  .self-introduction-leftarea {
+    width: 30%;
+    margin: 0 auto;
+  }
+  .my-icon{
+    width: 20vw;
+    margin-right: 0px;
+  }
+  .sns{
+    width: 15px;
+  }
+  .self-introduction-rightarea {
+    width: 100%;
+    padding-left: 0px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .header-navi-item {
+    font-size: 2vw;
+    padding: 0px 10px;
+  }
+  .sns {
+    width: 20px;
+  }
+  .self-introduction-rightarea p {
+    font-size: 1.2vw;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .self-introduction-rightarea p {
+    font-size: 0.02vw;
+    line-height: 40px;
+  }
+}
+
+/* skill
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+
+.skill-row {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0px auto 30px;
+}
+
+.skill-row-bottom {
+  justify-content: space-around;
+}
+
+.skill-icon {
+  position: relative;
+  border-bottom: 1px solid #707070;
+}
+
+.skill-icon-hover {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  visibility: hidden;
+}
+
+.skill-icon img {
+  padding-bottom: 20px;
+  
+}
+
+@media screen and (max-width: 1024px) {
+  .skill-row {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .skill-icon {
+    padding-bottom: 10px;
+    font-size: 1.5vw;
+  }
+  .skill-icon img {
+    width: 18vw;
+  }
+}
+
+/* performance
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+
+.sliderArea {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.sliderArea.w300 {
+  max-width: 300px;
+}
+
+.slick-slide {
+  margin: 0 5px;
+}
+
+.slick-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slick-prev, .slick-next {
+  z-index: 1;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #000;
+}
+
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: .2;
+}
+
+.slick-active {
+  opacity: 1;
+}
+
+.slick-current {
+  opacity: 1;
+}
+
+.thumb {
+  margin: 20px 0 0;
+}
+
+.thumb .slick-slide {
+  cursor: pointer;
+}
+
+.thumb .slick-slide:hover {
+  opacity: .7;
+}
+
+.remodal {
+  position: relative;
+  padding: 25px;
+  width: 80%;
+}
+
+.remodal-img img{
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.remodal-text p {
+  margin: 20px 0px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.remodal-cancel {
+  color: #fff;
+  background: #000000;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.remodal-cancel:hover {
+  background: #333;
+}
+
+/* contact
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+
+#contact-box {
+  text-align: justify;
+}
+
+.form {
+  margin: 80px auto 0px;
+  max-width: 720px;
+}
+
+.contact-item {
+  border-top: 1px solid #ddd;
+  padding: 24px 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.contact-item:nth-child(4) {
+  border-bottom: 1px solid #ddd;
+}
+
+.form-label {
+  width: 100%;
+  max-width: 248px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.form-label {
+  margin-top: 8px;
+  margin-bottom: auto;
+}
+
+.form-required {
+  border-radius: 6px;
+  margin-right: 8px;
+  padding: 8px 0px;
+  width: 48px;
+  display: inline-block;
+  text-align: center;
+  background: #C19078;
+  color: #fff;
+  font-size: 14px;
+}
+
+.non-required {
+  padding-left: 60px;
+}
+
+.form-input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 48px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
+}
+
+.form-textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding: 1em;
+  height: 216px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
+}
+
+.form-btn {
+  border-radius: 6px;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 280px;
+  display: block;
+  letter-spacing: 0.05em;
+  background: #C19078;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+}
+
+.form-btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .contact-item {
+    display: block;
+  }
+  .form-label {
+    display: block;
+    padding-bottom: 20px;
+  }
+  .form-input, .form-textarea {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form {
+    margin-top: 40px;
+  }
+  .contact-item {
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .form-required {
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 32px;
+    font-size: 10px;
+  }
+  .form-label {
+    margin-top: 0;
+  }
+  .form-label {
+    max-width: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+  .form-input {
+    margin-left: 0;
+    margin-top: 18px;
+    height: 40px;
+    flex: inherit;
+    font-size: 15px;
+  }
+  .form-textarea {
+    margin-top: 18px;
+    margin-left: 0;
+    height: 200px;
+    flex: inherit;
+    font-size: 15px;
+  }
+  .form-btn {
+    margin-top: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 160px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .non-required {
+    padding-left: 40px;
+  }
+}
+
+/* at-the-end
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+
+.at-the-end-area p {
+  font-size: 12px;
+  line-height: 50px;
+  border-bottom: 1px solid #707070;
+}
+
+@media screen and (max-width: 520px) {
+  .at-the-end-area p {
+    font-size: 1.2vw;
+    line-height: 40px;
+  }
+}
+
+/*――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
+――
+  3.footer
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+
+.footer-area {
+  text-align: center;
+  line-height: 60px;
+  height: 60px;
+  background-color: #C19078;
+  color: #fff;
+}
+
+/* copy-right-area
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+*/
+
+.copy-right {
+  padding: 20px 0px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.fadein {
+  opacity: 0;
+  transform: translate(0, 50px);
+  transition: all 1500ms;
+}
+
+.fadein.scrollin {
+  opacity: 1;
+  transform: translate(0, 0);
+}
