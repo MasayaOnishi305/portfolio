@@ -397,6 +397,13 @@ main {
   background: #333;
 }
 
+.source{
+  width: 10%;
+  margin-left: auto;
+}
+.source img{
+  opacity: 0.7;
+}
 /* contact
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 */

@@ -37,6 +37,10 @@
 .remodal-cancel {
     background: #C19078;
 }
+.remodal-cancel:hover{
+    background: #C19078;
+    opacity: 0.5;
+}
 
 @media screen and (max-width: 770px) {
     .slick-next {
